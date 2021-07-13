@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2B12D2269E048100C9EEDA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B12D1269E048100C9EEDA /* WelcomeViewController.swift */; };
 		FAE38FB9269DF01100C5005B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE38FB8269DF01100C5005B /* AppDelegate.swift */; };
 		FAE38FBB269DF01100C5005B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE38FBA269DF01100C5005B /* SceneDelegate.swift */; };
 		FAE38FBD269DF01100C5005B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE38FBC269DF01100C5005B /* LoginViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA2B12D1269E048100C9EEDA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FAE38FB5269DF01100C5005B /* adminPanelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adminPanelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE38FB8269DF01100C5005B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE38FBA269DF01100C5005B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				FAE38FBA269DF01100C5005B /* SceneDelegate.swift */,
 				FAE38FBC269DF01100C5005B /* LoginViewController.swift */,
 				FAE38FBE269DF01100C5005B /* Main.storyboard */,
+				FA2B12D1269E048100C9EEDA /* WelcomeViewController.swift */,
 				FAE38FC1269DF01200C5005B /* Assets.xcassets */,
 				FAE38FC3269DF01200C5005B /* LaunchScreen.storyboard */,
 				FAE38FC6269DF01200C5005B /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE38FBD269DF01100C5005B /* LoginViewController.swift in Sources */,
+				FA2B12D2269E048100C9EEDA /* WelcomeViewController.swift in Sources */,
 				FAE38FB9269DF01100C5005B /* AppDelegate.swift in Sources */,
 				FAE38FBB269DF01100C5005B /* SceneDelegate.swift in Sources */,
 			);
