@@ -8,11 +8,18 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
+    
+    var userUILabel: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        userLabel.text = userUILabel
     }
-
-
+    
+    @IBAction func logOutButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
 }

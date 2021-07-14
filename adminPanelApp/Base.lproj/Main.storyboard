@@ -107,21 +107,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDq-Or-9J3">
-                                <rect key="frame" x="16" y="140" width="145" height="37"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="yYz-z2-b1K">
+                                <rect key="frame" x="101.33333333333333" y="140" width="187.33333333333337" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDq-Or-9J3">
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="40"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
+                                        <color key="textColor" red="1" green="0.91764705882352937" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUU-N3-tU4" userLabel="userLabel">
+                                        <rect key="frame" x="137" y="0.0" width="50.333333333333343" height="40"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
+                                        <color key="textColor" red="1" green="0.91764705879999997" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="aSf-Bm-4nU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="187" id="Ub7-7b-gc6"/>
+                                    <constraint firstAttribute="height" constant="40" id="fTM-3Y-nWS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
-                                <color key="textColor" red="1" green="0.91764705882352937" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGa-yi-YDW">
                                 <rect key="frame" x="146.66666666666666" y="550" width="96.666666666666657" height="31"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
                                 <state key="normal" title="Log out">
                                     <color key="titleColor" red="1" green="0.91764705882352937" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logOutButton:" destination="qiI-gO-E3F" eventType="touchUpInside" id="Ny7-tm-RlH"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face.smiling.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qHa-Uf-dc1">
                                 <rect key="frame" x="109" y="281" width="172" height="111.66666666666669"/>
@@ -134,17 +149,20 @@
                         <viewLayoutGuide key="safeArea" id="ydh-cN-uWf"/>
                         <color key="backgroundColor" red="0.91966730356216431" green="0.12755709886550903" blue="0.3236241340637207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="yYz-z2-b1K" firstAttribute="top" secondItem="ydh-cN-uWf" secondAttribute="top" constant="140" id="28E-YG-gSr"/>
                             <constraint firstItem="yGa-yi-YDW" firstAttribute="width" secondItem="0Mq-5X-Mc3" secondAttribute="height" multiplier="79:647" id="4os-YC-nfV"/>
-                            <constraint firstItem="sDq-Or-9J3" firstAttribute="leading" secondItem="ydh-cN-uWf" secondAttribute="leading" constant="16" id="8gy-Q6-drN"/>
                             <constraint firstItem="qHa-Uf-dc1" firstAttribute="top" secondItem="0Mq-5X-Mc3" secondAttribute="top" constant="280" id="9q6-NF-CeT"/>
-                            <constraint firstItem="sDq-Or-9J3" firstAttribute="top" secondItem="ydh-cN-uWf" secondAttribute="top" constant="140" id="Kic-Lq-o1P"/>
                             <constraint firstItem="yGa-yi-YDW" firstAttribute="centerX" secondItem="0Mq-5X-Mc3" secondAttribute="centerX" id="eXR-PE-Mwd"/>
-                            <constraint firstItem="ydh-cN-uWf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sDq-Or-9J3" secondAttribute="trailing" symbolic="YES" id="m3r-Bq-NN9"/>
+                            <constraint firstItem="yYz-z2-b1K" firstAttribute="centerX" secondItem="0Mq-5X-Mc3" secondAttribute="centerX" id="kRK-OL-Gmx"/>
                             <constraint firstItem="qHa-Uf-dc1" firstAttribute="width" secondItem="0Mq-5X-Mc3" secondAttribute="height" multiplier="141:647" id="mbu-oh-l5w"/>
                             <constraint firstItem="yGa-yi-YDW" firstAttribute="top" secondItem="ydh-cN-uWf" secondAttribute="top" constant="550" id="oKk-Fv-tUD"/>
                             <constraint firstItem="qHa-Uf-dc1" firstAttribute="centerX" secondItem="0Mq-5X-Mc3" secondAttribute="centerX" id="x1x-NB-9h1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userLabel" destination="qUU-N3-tU4" id="Fi4-Xq-evc"/>
+                        <outlet property="welcomeLabel" destination="sDq-Or-9J3" id="6dy-dj-Yby"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18x-04-Yjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
