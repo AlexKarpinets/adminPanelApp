@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Admin Panel-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="adminPanelApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,7 +89,7 @@
                             <constraint firstItem="XXv-zO-isp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WkS-3U-l5l"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hGy-BO-9I2"/>
+                    <navigationItem key="navigationItem" title="Admin Panel" id="hGy-BO-9I2"/>
                     <connections>
                         <outlet property="nameTextField" destination="78f-d5-ciB" id="82I-l6-aGQ"/>
                         <outlet property="passwordTextField" destination="lto-TK-lLK" id="eYE-Le-aQW"/>
@@ -136,6 +136,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logOutButton:" destination="qiI-gO-E3F" eventType="touchUpInside" id="Ny7-tm-RlH"/>
+                                    <segue destination="SJP-ro-v7P" kind="unwind" unwindAction="unwindFor:" id="bVD-DE-NTY"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face.smiling.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qHa-Uf-dc1">
@@ -165,6 +166,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18x-04-Yjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="SJP-ro-v7P" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1887.6923076923076" y="116.58767772511848"/>
         </scene>
@@ -176,6 +178,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EUJ-4j-PDZ">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -24,10 +24,15 @@ class LoginViewController: UIViewController {
         welcomeVC.userUILabel = nameTextField.text
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+    }
+    
     @IBAction func loginButton(_ sender: UIButton) {
         if nameTextField.text != userName,
            passwordTextField.text != password {
-            showAlert(title: "Invalid login or password", message: "Please, enter correct login and password")
+            showAlert(title: "Invalid login or password",
+                      message: "Please, enter correct login and password")
             return
         }
     }
@@ -39,12 +44,19 @@ class LoginViewController: UIViewController {
     @IBAction func forgotPasswordButton(_ sender: UIButton) {
         showAlert(title: "Le pardon!😎", message: "Your Password is - 'Password'!")
     }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        nameTextField.text = ""
+        passwordTextField.text = ""
+    }
 }
 
 extension LoginViewController {
     private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let horoshoAction = UIAlertAction(title: "HOROSHO", style: .default) { nameTextField in
+        let alert = UIAlertController(title: title, message:
+                                        message, preferredStyle: .alert)
+        let horoshoAction = UIAlertAction(title: "HOROSHO",
+                                          style: .default) { nameTextField in
             self.nameTextField.text = ""
             self.passwordTextField.text = ""
         }
