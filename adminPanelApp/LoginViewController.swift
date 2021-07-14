@@ -38,11 +38,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotUNButton(_ sender: UIButton) {
-        showAlert(title: "Le pardon!😎", message: "Your Name is - 'Name'!")
+        showAlert(title: "Le pardon!😎",
+                  message: "Your Name is - 'Name'!")
     }
     
     @IBAction func forgotPasswordButton(_ sender: UIButton) {
-        showAlert(title: "Le pardon!😎", message: "Your Password is - 'Password'!")
+        showAlert(title: "Le pardon!😎",
+                  message: "Your Password is - 'Password'!")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
