@@ -9,12 +9,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    let userName = "Name"
-    let password = "Password"
+    // MARK: - Private properties
+    private let userName = "Name"
+    private let password = "Password"
     
+    //MARK: - Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -37,6 +40,7 @@ class LoginViewController: UIViewController {
         }
     }
     
+    //MARK: - IBActions
     @IBAction func forgotUNButton(_ sender: UIButton) {
         showAlert(title: "Le pardon!😎",
                   message: "Your Name is - 'Name'!")
@@ -53,10 +57,11 @@ class LoginViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
 extension LoginViewController {
     private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message:
-                                        message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title,
+                                      message: message, preferredStyle: .alert)
         let horoshoAction = UIAlertAction(title: "HOROSHO",
                                           style: .default) { nameTextField in
             self.nameTextField.text = ""

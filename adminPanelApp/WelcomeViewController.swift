@@ -9,6 +9,7 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     
