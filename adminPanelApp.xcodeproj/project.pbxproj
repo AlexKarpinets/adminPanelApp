@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2485E526A2DED0000496FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2485E426A2DED0000496FE /* User.swift */; };
 		FA2B12D2269E048100C9EEDA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B12D1269E048100C9EEDA /* WelcomeViewController.swift */; };
 		FAE38FB9269DF01100C5005B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE38FB8269DF01100C5005B /* AppDelegate.swift */; };
 		FAE38FBB269DF01100C5005B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE38FBA269DF01100C5005B /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA2485E426A2DED0000496FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA2B12D1269E048100C9EEDA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FAE38FB5269DF01100C5005B /* adminPanelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adminPanelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE38FB8269DF01100C5005B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA2485DF26A2DC17000496FE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAE38FBC269DF01100C5005B /* LoginViewController.swift */,
+				FA2B12D1269E048100C9EEDA /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA2485E026A2DC2E000496FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA2485E426A2DED0000496FE /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA2485E126A2DC51000496FE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FAE38FBE269DF01100C5005B /* Main.storyboard */,
+				FAE38FC3269DF01200C5005B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA2485E226A2DC74000496FE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FAE38FC1269DF01200C5005B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA2485E326A2DC9C000496FE /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FAE38FB8269DF01100C5005B /* AppDelegate.swift */,
+				FAE38FBA269DF01100C5005B /* SceneDelegate.swift */,
+				FAE38FC6269DF01200C5005B /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 		FAE38FAC269DF01100C5005B = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +104,11 @@
 		FAE38FB7269DF01100C5005B /* adminPanelApp */ = {
 			isa = PBXGroup;
 			children = (
-				FAE38FB8269DF01100C5005B /* AppDelegate.swift */,
-				FAE38FBA269DF01100C5005B /* SceneDelegate.swift */,
-				FAE38FBC269DF01100C5005B /* LoginViewController.swift */,
-				FAE38FBE269DF01100C5005B /* Main.storyboard */,
-				FA2B12D1269E048100C9EEDA /* WelcomeViewController.swift */,
-				FAE38FC1269DF01200C5005B /* Assets.xcassets */,
-				FAE38FC3269DF01200C5005B /* LaunchScreen.storyboard */,
-				FAE38FC6269DF01200C5005B /* Info.plist */,
+				FA2485E026A2DC2E000496FE /* Models */,
+				FA2485DF26A2DC17000496FE /* ViewControllers */,
+				FA2485E126A2DC51000496FE /* Storyboards */,
+				FA2485E326A2DC9C000496FE /* SupportFiles */,
+				FA2485E226A2DC74000496FE /* Resources */,
 			);
 			path = adminPanelApp;
 			sourceTree = "<group>";
@@ -140,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2485E526A2DED0000496FE /* User.swift in Sources */,
 				FAE38FBD269DF01100C5005B /* LoginViewController.swift in Sources */,
 				FA2B12D2269E048100C9EEDA /* WelcomeViewController.swift in Sources */,
 				FAE38FB9269DF01100C5005B /* AppDelegate.swift in Sources */,
@@ -292,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S3TXMX6C6U;
-				INFOPLIST_FILE = adminPanelApp/Info.plist;
+				INFOPLIST_FILE = adminPanelApp/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S3TXMX6C6U;
-				INFOPLIST_FILE = adminPanelApp/Info.plist;
+				INFOPLIST_FILE = adminPanelApp/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
