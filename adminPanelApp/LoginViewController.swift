@@ -30,8 +30,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
-        if nameTextField.text != userName,
-           passwordTextField.text != password {
+        if nameTextField.text != userName ||
+            passwordTextField.text != password {
             showAlert(title: "Invalid login or password",
                       message: "Please, enter correct login and password")
             return
