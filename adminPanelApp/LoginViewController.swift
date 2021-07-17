@@ -18,9 +18,6 @@ class LoginViewController: UIViewController {
     private let password = "Password"
     
     //MARK: - Life cycle methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
@@ -29,6 +26,7 @@ class LoginViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
@@ -62,12 +60,12 @@ extension LoginViewController {
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title,
                                       message: message, preferredStyle: .alert)
-        let horoshoAction = UIAlertAction(title: "HOROSHO",
-                                          style: .default) { nameTextField in
+        let okAction = UIAlertAction(title: "OK",
+                                          style: .default) { _ in
             self.nameTextField.text = ""
             self.passwordTextField.text = ""
         }
-        alert.addAction(horoshoAction)
+        alert.addAction(okAction)
         present(alert, animated: true)
     }
 }

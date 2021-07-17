@@ -19,8 +19,4 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         userLabel.text = userUILabel
     }
-    
-    @IBAction func logOutButton(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
 }

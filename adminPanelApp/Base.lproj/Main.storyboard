@@ -45,7 +45,7 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NzB-oQ-HJl"/>
-                                    <segue destination="qiI-gO-E3F" kind="presentation" id="gTA-Xd-xd3"/>
+                                    <segue destination="qiI-gO-E3F" kind="presentation" modalPresentationStyle="fullScreen" id="gTA-Xd-xd3"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="jvj-5r-gku">
@@ -104,11 +104,11 @@
             <objects>
                 <viewController id="qiI-gO-E3F" customClass="WelcomeViewController" customModule="adminPanelApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Mq-5X-Mc3">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="yYz-z2-b1K">
-                                <rect key="frame" x="101.33333333333333" y="140" width="187.33333333333337" height="40"/>
+                                <rect key="frame" x="101.33333333333333" y="184" width="187.33333333333337" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDq-Or-9J3">
                                         <rect key="frame" x="0.0" y="0.0" width="133" height="40"/>
@@ -129,18 +129,17 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGa-yi-YDW">
-                                <rect key="frame" x="146.66666666666666" y="550" width="96.666666666666657" height="31"/>
+                                <rect key="frame" x="143.33333333333334" y="594" width="103.33333333333334" height="31"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
                                 <state key="normal" title="Log out">
                                     <color key="titleColor" red="1" green="0.91764705882352937" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="logOutButton:" destination="qiI-gO-E3F" eventType="touchUpInside" id="Ny7-tm-RlH"/>
                                     <segue destination="SJP-ro-v7P" kind="unwind" unwindAction="unwindFor:" id="bVD-DE-NTY"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face.smiling.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qHa-Uf-dc1">
-                                <rect key="frame" x="109" y="281" width="172" height="111.66666666666669"/>
+                                <rect key="frame" x="103" y="281" width="184" height="111.66666666666669"/>
                                 <color key="tintColor" red="0.97647058819999999" green="0.69803921570000005" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="113" id="fat-hQ-6qK"/>
