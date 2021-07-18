@@ -211,7 +211,13 @@
                             <constraint firstItem="MVv-yF-t8f" firstAttribute="leading" secondItem="esQ-Q4-RcZ" secondAttribute="leading" constant="30" id="m1o-m4-Vsy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mQB-NY-c0w"/>
+                    <navigationItem key="navigationItem" id="mQB-NY-c0w">
+                        <barButtonItem key="rightBarButtonItem" title="More photos" id="A5A-EI-MZT">
+                            <connections>
+                                <segue destination="rsn-vb-vbs" kind="presentation" modalPresentationStyle="fullScreen" id="8HN-N8-odS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="BioText" destination="hIA-hO-ZDk" id="Ly3-vZ-iJi"/>
                         <outlet property="ProfImage" destination="7NQ-WM-Bjt" id="hsK-FL-WQL"/>
@@ -219,7 +225,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7G-Zd-H6C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4529.2307692307695" y="137.91469194312796"/>
+            <point key="canvasLocation" x="4461" y="137"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MTx-SN-iYC">
+            <objects>
+                <viewController id="rsn-vb-vbs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qfI-Au-NLJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="HU8-YP-ZQo">
+                                <rect key="frame" x="40" y="30" width="240" height="470"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ldh-66-IkZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="EYD-0m-xh2"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LNl-ep-nP0">
+                                        <rect key="frame" x="0.0" y="170" width="240" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="WK3-JQ-dvx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cje-95-GiO">
+                                        <rect key="frame" x="0.0" y="340" width="240" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="sdz-Ok-Sns"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LNl-ep-nP0" firstAttribute="top" secondItem="ldh-66-IkZ" secondAttribute="bottom" constant="40" id="l6N-a1-taA"/>
+                                    <constraint firstItem="cje-95-GiO" firstAttribute="top" secondItem="LNl-ep-nP0" secondAttribute="bottom" constant="40" id="yfW-LD-9nK"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqS-nA-8bQ">
+                                <rect key="frame" x="135" y="518" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="pbj-gT-s7n"/>
+                                </constraints>
+                                <state key="normal" title="Exit"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tp1-bK-3e0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SqS-nA-8bQ" firstAttribute="centerX" secondItem="qfI-Au-NLJ" secondAttribute="centerX" id="4hx-KV-Fj8"/>
+                            <constraint firstItem="HU8-YP-ZQo" firstAttribute="top" secondItem="Tp1-bK-3e0" secondAttribute="top" constant="30" id="9NM-wy-3Gj"/>
+                            <constraint firstItem="HU8-YP-ZQo" firstAttribute="leading" secondItem="Tp1-bK-3e0" secondAttribute="leading" constant="40" id="b0U-gF-zEZ"/>
+                            <constraint firstItem="HU8-YP-ZQo" firstAttribute="centerX" secondItem="qfI-Au-NLJ" secondAttribute="centerX" id="bMq-ix-upX"/>
+                            <constraint firstItem="SqS-nA-8bQ" firstAttribute="top" secondItem="cje-95-GiO" secondAttribute="bottom" constant="18" id="sGH-Sd-dpn"/>
+                            <constraint firstItem="Tp1-bK-3e0" firstAttribute="trailing" secondItem="HU8-YP-ZQo" secondAttribute="trailing" constant="40" id="z42-bJ-zod"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Afu-oo-SOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5344" y="136"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jZF-kh-Ne1">
