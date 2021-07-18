@@ -14,16 +14,25 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     // MARK: - Private properties
-    private let user = UserLogin(userNameLogin: "Alexander", password: "Password")
-    //    private let userName = "Name"
-    //    private let password = "Password"
+    private let user = UserLogin()
+    private var person = Person.getPerson()
     
-    //MARK: - Life cycle methods
-    
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
         welcomeVC.userUILabel = nameTextField.text
     }
+    
+//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//                let tabBarController = segue.destination as! UITabBarController
+//            let navVC = tabBarController.viewControllers!.first as! UINavigationController
+//            let welcomeVC = navVC.viewControllers.first as! WelcomeViewController
+//            welcomeVC.userUILabel = person[0]
+////                 for viewController in viewControllers {
+////                    if let welcomeVC = viewController as? WelcomeViewController {
+////        } }
+////        ...
+//        }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -31,8 +40,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
-        if nameTextField.text != user ||
-            passwordTextField.text != user {
+        if nameTextField.text != user.userNameLogin ||
+            passwordTextField.text != user.password {
             showAlert(title: "Invalid login or password",
                       message: "Please, enter correct login and password")
             return
@@ -62,7 +71,7 @@ extension LoginViewController {
         let alert = UIAlertController(title: title,
                                       message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK",
-                                          style: .default) { _ in
+                                     style: .default) { _ in
             self.nameTextField.text = ""
             self.passwordTextField.text = ""
         }
